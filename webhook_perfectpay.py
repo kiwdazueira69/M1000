@@ -78,7 +78,11 @@ def pagamento_perfectpay():
     return jsonify({"message": "Pagamento não aprovado"}), 400
 
 
+import os
+
 if __name__ == "__main__":
     criar_tabela()
-    print("✅ API rodando na porta 4000")
-    app.run(port=4000)
+    port = int(os.environ.get("PORT", 5000))  # Pega a porta do ambiente, se não achar, usa 5000
+    print(f"✅ API rodando na porta {port}")
+    app.run(host='0.0.0.0', port=port)
+
