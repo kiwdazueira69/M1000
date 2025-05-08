@@ -80,5 +80,5 @@ def pagamento_perfectpay():
 
 if __name__ == "__main__":
     criar_tabela()
-    print("✅ API rodando na porta 5000")
-    app.run(port=5000)
+    print("✅ API rodando na porta 4000")
+    app.run(port=4000)
